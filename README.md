@@ -1,69 +1,26 @@
-# PdfWork app
+# PDF Vector Compressor (Android & Desktop)
 
-## Run the app
+An advanced, high-performance tool designed to compress complex vector PDF files (such as CAD drawings, architectural blueprints, and vector-heavy documents) by detecting and deduplicating recurring vector paths into reusable Form XObjects, backed by `zlib` compression.
 
-### uv
+Now featuring a sleek **Flet (Python)** cross-platform graphical user interface optimized for **Android** and desktop environments!
 
-Run as a desktop app:
+---
 
-```bash
-uv run flet run
-```
+## 🚀 What's New in Update 4 (Android Release)
+* **Flet 1.x Architecture:** Fully migrated to Flet 1.x, ensuring smooth execution and removing legacy bugs.
+* **Android Native Integration:** 
+  * Custom sleek app icon integration (`assets/icon.png`).
+  * Automatic output directory structuring (`/Download/PDF_Compressed/`).
+  * Built-in native file picker and file sharing (`ft.Share`) support to instantly share compressed PDFs via WhatsApp, Telegram, etc.
+* **Vector Deduplication Engine (`vec_dedup.py`):** Deep parsing of PDF operator streams (`m`, `l`, `c`, `v`, `y`, `re`, painting operators), grouping repeated vector geometries, and compressing streams with maximum `zlib` level 9.
 
-Run as a web app:
+---
 
-```bash
-uv run flet run --web
-```
-
-For more details on running the app, refer to the [Getting Started Guide](https://flet.dev/docs/).
-
-## Build the app
-
-### Android
-
-```bash
-flet build apk -v
-```
-
-For more details on building and signing `.apk` or `.aab`, refer to the [Android Packaging Guide](https://flet.dev/docs/publish/android/).
-
-### iOS
-
-```bash
-flet build ipa -v
-```
-
-For more details on building and signing `.ipa`, refer to the [iOS Packaging Guide](https://flet.dev/docs/publish/ios/).
-
-### macOS
-
-```bash
-flet build macos -v
-```
-
-For more details on building macOS package, refer to the [macOS Packaging Guide](https://flet.dev/docs/publish/macos/).
-
-### Linux
-
-```bash
-flet build linux -v
-```
-
-For more details on building Linux package, refer to the [Linux Packaging Guide](https://flet.dev/docs/publish/linux/).
-
-### Windows
-
-```bash
-flet build windows -v
-```
-
-For more details on building Windows package, refer to the [Windows Packaging Guide](https://flet.dev/docs/publish/windows/).
-
-### Web
-
-```bash
-flet build web -v
-```
-
-For more details on building Web app, refer to the [Web Packaging Guide](https://flet.dev/docs/publish/web/).
+## 📂 Project Structure
+```text
+PDF_new/
+├── main.py            # Flet GUI application & Android event handlers
+├── vec_dedup.py       # Core PDF vector deduplication & compression engine
+├── pyproject.toml     # Project metadata, Flet configurations & Android permissions
+└── assets/
+    └── icon.png       # Custom application icon
