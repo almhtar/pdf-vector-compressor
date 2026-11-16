@@ -1,0 +1,22 @@
+[project]
+name = "pdf-new"
+version = "0.1.0"
+description = "PDF Compression Tool"
+requires-python = ">=3.10"
+dependencies = [
+    "flet>=1.1.2",
+]
+
+[tool.flet]
+org = "com.zakaria.pdfnew"
+product = "PDF Compressor"
+company = "PDF Work"
+copyright = "Copyright (C) 2026"
+
+[tool.flet.app]
+main_path = "main.py"
+
+[tool.flet.android.permission]
+"android.permission.READ_EXTERNAL_STORAGE" = true
+"android.permission.WRITE_EXTERNAL_STORAGE" = true
+"android.permission.MANAGE_EXTERNAL_STORAGE" = true

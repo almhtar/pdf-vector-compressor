@@ -1,0 +1,17 @@
+# Flet & Flutter Build Artifacts
+build/
+.flet/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
